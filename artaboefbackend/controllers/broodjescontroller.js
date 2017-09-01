@@ -6,3 +6,11 @@ exports.getBroodjes = function(req,res){
         else  res.status(200).send(resp);
     });
 }
+exports.fillBroodjes = function(req,res){
+    var b = new Broodjes({
+        name: 'Smos',
+        description: 'Smos',
+        price: 3.49
+    });
+    b.save()
+}

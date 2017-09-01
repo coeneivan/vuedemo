@@ -1,13 +1,19 @@
 const mongoose = require('mongoose'),
 schema = mongoose.Schema;
+require('mongoose-double')(mongoose);
+var SchemaTypes = mongoose.Schema.Types;
 
 const BestellingSchema = new schema({
     user:{
         type: String,
         required: true
     },
-    broodje:{
+    broodjeName:{
         type: String,
+        required: true
+    },
+    price: {
+        type: SchemaTypes.Double,
         required: true
     },
     datum:{

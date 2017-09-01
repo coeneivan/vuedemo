@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var expressVal = require('express-validator');
 var app = express();
 
 // view engine setup
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 let connect = function () {
   let options = {server: {socketOptions: {keepAlive: 1}}};
   mongoose.connect('mongodb://stutje:user1234@ds036617.mlab.com:36617/artaboef', function (err) {
@@ -29,6 +31,7 @@ let connect = function () {
 };
 
 connect();
+app.use(expressVal([]));
 var router = require('./config/routes')(app)
 
 
