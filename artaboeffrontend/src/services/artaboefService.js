@@ -13,5 +13,8 @@ export default {
             'Authorization': username,
             'Content-Type':'application/json'
         }})
+    },
+    getBestellingen(){
+        return Vue.http.get(CONFIG.apiUrl + "bestellingen")
     }
 }

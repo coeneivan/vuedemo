@@ -4,6 +4,9 @@
     <md-layout md-gutter>
     <md-layout md-flex="80" md-flex-offset="10">
       <h2 class="md-tilte">Artaboef</h2>
+      <span style="flex:1"></span>
+      <router-link tag="md-button" to="home">home</router-link>
+      <router-link tag="md-button" to="bestellingen">Bestellingen</router-link>
     </md-layout>
   </md-layout>
   </md-toolbar>

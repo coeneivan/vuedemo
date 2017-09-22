@@ -11,6 +11,7 @@ export default  {
   data() {
     return {
       username:"Ivan",
+      message:"",
       gekozenBroodje:{},
       gekozenBroodjeNaam:"",
       broodjes:[]
@@ -27,8 +28,10 @@ export default  {
       this.$refs['dialog'].close();
     },
     plaatsbestelling:function(){
-      console.log("PLAATS BESTELLING")
-      artaboefService.postBestelling(this.gekozenBroodje._id,this.username)
+      artaboefService.postBestelling(this.gekozenBroodje._id,this.username).then(response=>{
+        this.message = "Bestelling geplaatst"
+        this.$refs.snackbar.open();
+      })
       this.$refs['dialog'].close();
     }
   },

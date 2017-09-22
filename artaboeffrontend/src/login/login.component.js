@@ -11,7 +11,7 @@ export default  {
   methods: {
    login:function(){
      console.log(this.username)
-     this.$router.push("/order")
+     this.$router.push("home")
    }
   },
   computed: {

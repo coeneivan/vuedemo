@@ -1,0 +1,27 @@
+
+<section class="bestellingen">
+  <md-table-card id="history">
+    <md-toolbar>
+      <h1 class="md-title">Reeds geplaatste bestellingen</h1>
+    </md-toolbar>
+  
+    <md-table>
+      <md-table-header>
+        <md-table-row>
+          <md-table-head>Broodje</md-table-head>
+          <md-table-head><md-icon>euro</md-icon>Prijs</md-table-head>
+          <md-table-head>door</md-table-head>
+        </md-table-row>
+      </md-table-header>
+  
+      <md-table-body>
+        <md-table-row v-for="item in bestellingen" :key="item._id">
+          <md-table-cell>{{item.broodjeName}}</md-table-cell>
+          <md-table-cell>{{item.price}}</md-table-cell>
+          <md-table-cell>{{item.user}}</md-table-cell>
+        </md-table-row>
+      </md-table-body>
+    </md-table>
+  </md-table-card>
+</section>
+

@@ -8,7 +8,7 @@
     </md-select>
   </md-input-container>
   <md-button class="md-raised md-primary" id="bestel" @click="bestel">Bestel</md-button>
-
+   
   <md-dialog md-open-from="#bestel" md-close-to="#bestel" ref="dialog">
     <md-dialog-title>Bestel broodje</md-dialog-title>
   
@@ -19,6 +19,10 @@
       <md-button class="md-primary" @click="plaatsbestelling">Ok</md-button>
     </md-dialog-actions>
   </md-dialog>
+  <md-snackbar md-position="bottom center" ref="snackbar">
+    <span>{{message}}</span>
+  </md-snackbar>
+
 
 </section>
 
