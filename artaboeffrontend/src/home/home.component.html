@@ -1,0 +1,24 @@
+
+<section class="home">
+  <h1>Bestel broodje</h1>
+  <md-input-container>
+    <label for="broodje">Kies je broodje</label>
+    <md-select name="broodje" v-model="gekozenBroodjeNaam" @change="broodjeWerdGekozen">
+      <md-option v-for="broodje in broodjes" :key="broodje.name" :value="broodje.name">{{broodje.name}}</md-option>
+    </md-select>
+  </md-input-container>
+  <md-button class="md-raised md-primary" id="bestel" @click="bestel">Bestel</md-button>
+
+  <md-dialog md-open-from="#bestel" md-close-to="#bestel" ref="dialog">
+    <md-dialog-title>Bestel broodje</md-dialog-title>
+  
+    <md-dialog-content v-if="gekozenBroodje">{{username}}, zeker dat je een broodje {{gekozenBroodje.name}} wilt bestellen voor € {{gekozenBroodje.price}}</md-dialog-content>
+  
+    <md-dialog-actions>
+      <md-button class="md-primary" @click="sluiten">Cancel</md-button>
+      <md-button class="md-primary" @click="plaatsbestelling">Ok</md-button>
+    </md-dialog-actions>
+  </md-dialog>
+
+</section>
+

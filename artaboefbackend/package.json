@@ -11,6 +11,7 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "express-validator": "^4.1.0",
+    "material-design": "0.0.0",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.9",
     "mongoose-double": "0.0.1",
@@ -21,6 +22,6 @@
   },
   "apidoc": {
     "title": "Artaboef API",
-    "url" : "http://localhost:3000/api/v1"
+    "url": "http://localhost:3000/api/v1"
   }
 }
