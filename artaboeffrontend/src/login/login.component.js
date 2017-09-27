@@ -1,5 +1,6 @@
 export default  {
   name: 'login',
+  dependencies : 'BoefService',
   props: [],
   mounted() {
     
@@ -10,8 +11,9 @@ export default  {
   },
   methods: {
    login:function(){
-     console.log(this.username)
+     this.BoefService.setUsername(this.username);
      this.$router.push("home")
+     
    }
   },
   computed: {
